@@ -3,7 +3,7 @@
 
     <div class="p-5">
         <h1 class="text-white"><i class="fa fa-cubes" style="font-size:36px"></i> Cashier's Dashboard <i class="	fa fa-calendar float-end" style="font-size:36px"></i> </h1>
-        <p class="text-white-50 fs-5 ">Point of Sales and Inventory Management System for Luminescene Company <button class="float-end btn btn-light"><?=  date("F j, Y - l")?></button></p>
+        <p class="text-white-50 fs-5 ">Point of Sales and Inventory Management System for Luminescence Company <button class="float-end btn btn-light"><?=  date("F j, Y - l")?></button></p>
     </div>
 </div>
  

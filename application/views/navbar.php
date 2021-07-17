@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
   <img src="<?= base_url("./images/6.png")?>" width="30" height="30" alt="">
-    <a class="navbar-brand" href="<?= base_url("dashboard")?>"><b style="color:#3b3b3b;"> LUMINESCENE </b></a>
+    <a class="navbar-brand" href="<?= base_url("dashboard")?>"><b style="color:#3b3b3b;"> LUMINESCENCE</b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

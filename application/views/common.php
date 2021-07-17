@@ -30,7 +30,7 @@
     <!-- css -->
     <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/footer.css">
 
-    <title><?=$title?> | Luminescene</title>
+    <title><?=$title?> | Luminescence</title>
 <body>
 
     
