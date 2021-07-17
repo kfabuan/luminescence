@@ -23,6 +23,12 @@ $this->load->view("common")
 </div>
 
 <div class="container" style="margin-top:2rem;">
+    <?php if ($this->session->flashdata('order_status')){ ?>
+        <div class="alert alert-success" role="alert">
+            <p class="fw-bold" style=''><?= $this->session->flashdata('order_status');?></p>
+        </div>
+    <?php unset($_SESSION['order_status']);} ?>
+
     <div class="d-flex justify-content-center text-dark ">
         
         <div class="card w-50 shadow-sm p-3 mb-5 bg-body rounded" style="max-width: 30rem;" >

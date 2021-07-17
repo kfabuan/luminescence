@@ -8,11 +8,12 @@
 </div>
  
  <!-- CARDS -->
- <?php if($this->session->flashdata('status') != ""):?>
-<div class="alert alert-success">
-  <strong><?php echo $this->session->flashdata('status')?></strong> 
-</div>
-<?php endif; ?>
+<?php if ($this->session->flashdata('status')){ ?>
+    <div class="alert alert-success" role="alert">
+        <p class="fw-bold" style=''><?= $this->session->flashdata('status');?></p>
+    </div>
+<?php unset($_SESSION['status']);} ?>
+
  <div>
 <div class="d-flex justify-content-evenly pt-3" stlye=" margin-top:9rem;">
 

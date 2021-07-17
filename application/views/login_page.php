@@ -53,17 +53,17 @@
         <div class="card w-50  shadow-sm p-3 mb-5 bg-body rounded " style="max-width: 25rem;">
         
         <div class="card-body">
-            <?php if($this->session->flashdata('status') != ""):?>
-            <div class="alert alert-danger">
-            <strong><?php echo $this->session->flashdata('status')?></strong> 
-            </div>
-            <?php endif; ?>
+            <?php if ($this->session->flashdata('status')){ ?>
+                <div class="alert alert-danger" role="alert">
+                    <p class="fw-bold" style=''><?= $this->session->flashdata('status');?></p>
+                </div>
+            <?php unset($_SESSION['status']);} ?>
 
-            <?php if($this->session->flashdata('success') != ""):?>
-            <div class="alert alert-success">
-            <strong><?php echo $this->session->flashdata('success')?></strong> 
-            </div>
-            <?php endif; ?>
+            <?php if ($this->session->flashdata('success')){ ?>
+                <div class="alert alert-danger" role="alert">
+                    <p class="fw-bold" style=''><?= $this->session->flashdata('success');?></p>
+                </div>
+            <?php unset($_SESSION['success']);} ?>
 
             <h3 class="card-title text-center text-primary rounded">LOGIN</h3>
                 <p class="text-center mb-4">Welcome to Luminescence</p>

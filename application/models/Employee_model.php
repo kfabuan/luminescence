@@ -41,7 +41,7 @@ class Employee_model extends CI_Model{
     public function send_email($to){
         $from_email = 'johndoe11321106@gmail.com'; //change this to yours
         $subject = 'Verify Your Email Address';
-        $message = 'Dear User,<br /><br />Please click on the below activation link to verify your email address.<br /><br /> http://localhost/psolights/employee/verify/' . md5($to) . '<br /><br /><br />Thanks<br />Mydomain Team';
+        $message = 'Dear User,<br /><br />Please click on the below activation link to verify your email address.<br /><br /> http://localhost/psolights/employee/verify/' . md5($to) . '<br /><br /><br />Thanks<br />Luminescence Company';
         
         //configure email settings
         $config['protocol'] = 'smtp';

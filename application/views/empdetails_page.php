@@ -7,12 +7,17 @@
 
 </div>
 
-<?php if ($this->session->flashdata('emp_status')){ ?>
+<?php if ($this->session->flashdata('photo_update')){ ?>
     <div class="alert alert-success" role="alert">
-        <p class="fw-bold" style=''><?= $this->session->flashdata('emp_status');?></p>
+        <p class="fw-bold" style=''><?= $this->session->flashdata('photo_update');?></p>
     </div>
- <?php unset($_SESSION['emp_status']);} ?>
+ <?php unset($_SESSION['photo_update']);} ?>
 
+ <?php if ($this->session->flashdata('photo_update_error')){ ?>
+    <div class="alert alert-danger" role="alert">
+        <p class="fw-bold" style=''><?= $this->session->flashdata('photo_update_error');?></p>
+    </div>
+ <?php unset($_SESSION['photo_update_error']);} ?>
 
 <div class="container" style="margin-top:2rem;">
     <div class="d-flex justify-content-center text-dark ">

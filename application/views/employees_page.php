@@ -125,13 +125,30 @@
   </div>
 </div>
 
-<?php if($this->session->flashdata('status') != ""):?>
-<div class="alert alert-success">
-  <strong><?php echo $this->session->flashdata('status')?></strong> 
-</div>
-<?php endif; ?>
 
+<?php if ($this->session->flashdata('emp_update_status')){ ?>
+    <div class="alert alert-success" role="alert">
+        <p class="fw-bold" style=''><?= $this->session->flashdata('emp_update_status');?></p>
+    </div>
+ <?php unset($_SESSION['emp_update_status']);} ?>
 
+ <?php if ($this->session->flashdata('delete_status')){ ?>
+    <div class="alert alert-success" role="alert">
+        <p class="fw-bold" style=''><?= $this->session->flashdata('delete_status');?></p>
+    </div>
+ <?php unset($_SESSION['delete_status']);} ?>
+
+ <?php if ($this->session->flashdata('emp_email_error')){ ?>
+    <div class="alert alert-danger" role="alert">
+        <p class="fw-bold" style=''><?= $this->session->flashdata('emp_email_error');?></p>
+    </div>
+ <?php unset($_SESSION['emp_email_error']);} ?>
+
+ <?php if ($this->session->flashdata('emp_verified_status')){ ?>
+    <div class="alert alert-success" role="alert">
+        <p class="fw-bold" style=''><?= $this->session->flashdata('emp_verified_status');?></p>
+    </div>
+ <?php unset($_SESSION['emp_verified_status']);} ?>
 
 <?php if(form_error("username")):?>
  <div class="alert alert-danger">
@@ -139,11 +156,12 @@
 </div>
 <?php endif; ?>
 
-<?php if ($this->session->flashdata('emp_add_status')){ ?>
+
+<?php if ($this->session->flashdata('emp_add_error')){ ?>
     <div class="alert alert-danger" role="alert">
-        <p class="fw-bold" style=''><?= $this->session->flashdata('emp_add_status');?></p>
+        <p class="fw-bold" style=''><?= $this->session->flashdata('emp_add_error');?></p>
     </div>
- <?php unset($_SESSION['emp_add_status']);} ?>
+ <?php unset($_SESSION['emp_add_error']);} ?>
 
 <!-- PARA MAKITA UNG MGA LIST OF EMPLOYEE -->
 <div class="container  border mt-5 shadow p-3 mb-5 bg-body rounded table-responsive">

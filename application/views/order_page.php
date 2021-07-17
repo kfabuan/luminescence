@@ -108,7 +108,7 @@
                     </div>
                 </div>
             
-                <button class="btn btn-outline-success mt-3 float-end" id="btn-check" type="submit">Check Out</button>
+                <button class="btn btn-outline-success mt-3 float-end" id="btn-check" type="submit" disabled>Check Out</button>
 
             </form>
         </div>

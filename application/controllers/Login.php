@@ -24,10 +24,11 @@ class Login extends CI_Controller{
                 $data["credentials"] = $login;
                 $this->session->set_userdata($data);
 
+                $_SESSION['logged_in']= "True";
                 redirect(base_url("dashboard"));
                 
             }else{
-                $this->session->set_flashdata("status", "Wrong Credentials. Please Try Again");
+                $this->session->set_flashdata("status", "Wrong Credentials. Please try again.");
                 $this->load->view("login_page");
             }
           
@@ -37,6 +38,8 @@ class Login extends CI_Controller{
     }
     public function logout(){
         $this->session->unset_userdata("credentials");
+
+        unset($_SESSION['logged_in']);
         redirect(base_url("login"));
     }
 }
