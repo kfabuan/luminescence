@@ -98,6 +98,8 @@ class Employee extends CI_Controller{
             }
 
         }else{
+            $this->session->set_flashdata("emp_add_status", "Error creating account. Email/Username already exist.");
+
             redirect(base_url("employee"));
             
             // $data["employees"] = $this->Employee_model->get_all(1,0);

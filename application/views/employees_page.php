@@ -139,7 +139,11 @@
 </div>
 <?php endif; ?>
 
-
+<?php if ($this->session->flashdata('emp_add_status')){ ?>
+    <div class="alert alert-danger" role="alert">
+        <p class="fw-bold" style=''><?= $this->session->flashdata('emp_add_status');?></p>
+    </div>
+ <?php unset($_SESSION['emp_add_status']);} ?>
 
 <!-- PARA MAKITA UNG MGA LIST OF EMPLOYEE -->
 <div class="container  border mt-5 shadow p-3 mb-5 bg-body rounded table-responsive">
